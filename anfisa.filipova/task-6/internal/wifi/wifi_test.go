@@ -100,7 +100,6 @@ func TestGetAddresses(t *testing.T) {
 
 		addrs, err := service.GetAddresses()
 
-		require.Error(t, err)
 		require.ErrorContains(t, err, "getting interfaces:")
 		require.Nil(t, addrs)
 		mockWifi.AssertExpectations(t)
@@ -230,7 +229,6 @@ func TestGetNames(t *testing.T) {
 
 		names, err := service.GetNames()
 
-		require.Error(t, err)
 		require.ErrorContains(t, err, "getting interfaces:")
 		require.Nil(t, names)
 		mockWifi.AssertExpectations(t)
